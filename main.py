@@ -16,24 +16,30 @@ while programRun: # make program run continuously
     print("4. Divide")
     print("5. Quit \n")
 
-    userInput = int(input("Enter input: "))
+    try:
+        userInput = int(input("Enter input: "))
+        if userInput == 1: # call function from module
+            mathFunc.addFunction()
+            os.system('pause')
+        
+        if userInput == 2:
+            mathFunc.subtractFunction()
+            os.system('pause')
+            
+        if userInput == 3:
+            mathFunc.multiplyFunction()
+            os.system('pause')
+            
+        if userInput == 4:
+            mathFunc.divideFunction()
+            os.system('pause')
+            
+        if userInput == 5:
+            print("Goodbye")
+            programRun = False
+    except:
+        print("Please enter a valid input.")
+        os.system('pause')
 
-    if userInput == 1: # call function from module
-        mathFunc.addFunction()
-        os.system('pause')
-        
-    if userInput == 2:
-        mathFunc.subtractFunction()
-        os.system('pause')
-        
-    if userInput == 3:
-        mathFunc.multiplyFunction()
-        os.system('pause')
-        
-    if userInput == 4:
-        mathFunc.divideFunction()
-        os.system('pause')
-        
-    if userInput == 5:
-        print("Goodbye")
-        programRun = False
+
+    
