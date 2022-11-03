@@ -2,6 +2,7 @@
 # Getting back in Python, simple algorithms
 
 import os
+import mathFunc
 
 programRun = True
 
@@ -18,11 +19,7 @@ while programRun:
     userInput = int(input("Enter input: "))
 
     if userInput == 1:
-        print("What is the first number?: ")
-        firstNum = int(input("First number: "))
-        
-        print("What is the second number?: ")
-        secondNum = int(input("Second number: "))
+        mathFunc.addFunction()
         
     if userInput == 2:
         print("What is the first number?: ")
